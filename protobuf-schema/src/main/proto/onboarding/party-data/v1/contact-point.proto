@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option java_package = "dev.abarmin.poc.protobuf.model";
+
+message ContactPoint {
+  repeated PostalAddress postalAddresses = 1;
+}
+
+message PostalAddress {
+  string addressId = 1;
+  AddressTypeCode addressTypeCode = 2;
+}
+
+enum AddressTypeCode {
+  FIRST = 0;
+  SECOND = 1;
+  THIRD = 2;
+}

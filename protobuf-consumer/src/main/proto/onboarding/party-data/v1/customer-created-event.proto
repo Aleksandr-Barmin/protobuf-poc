@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+import "person.proto";
+
+option java_package = "dev.abarmin.poc.protobuf.model";
+
+message CustomerCreatedEvent {
+  Applicant applicant = 1;
+}
+
+message Applicant {
+  string applicantId = 1;
+  Person person = 2;
+}
